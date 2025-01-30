@@ -8,17 +8,12 @@ const jwt = require('jsonwebtoken');
 const authMiddleware = require('./middlewares/auth');
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: ["http://localhost:5173", "https://food-donation-frontend-sfsj.vercel.app.com"], // Add your frontend domain when deployed
-    methods: "GET, POST, PUT, DELETE",
-    credentials: true,
-  })
-);
+app.use(cors());
+
 //app.use(cors());
 //mongodb://localhost:27017/foodDonation
 
-mongoose.connect("mongodb+srv://saumya:saumya2005@cluster0.ii2ki.mongodb.net/")
+mongoose.connect("mongodb+srv://saumya:saumya2005@cluster0.ii2ki.mongodb.net/foodDonation")
   .then(() => console.log("Connected to the database"))
   .catch((err) => console.log("Failed to connect to the database", err));
 
