@@ -10,7 +10,7 @@ const authMiddleware = require('./middlewares/auth');
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://food-donation-frontend.vercel.app.com"], // Add your frontend domain when deployed
+    origin: ["http://localhost:5173", "https://food-donation-frontend-sfsj.vercel.app.com"], // Add your frontend domain when deployed
     methods: "GET, POST, PUT, DELETE",
     credentials: true,
   })
